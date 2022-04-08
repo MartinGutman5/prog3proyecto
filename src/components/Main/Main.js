@@ -4,14 +4,25 @@ class Main extends Component {
     constructor (){
         super ()
         this.state={
-            //caracteristicas que van cambiando
+         listaTracks:[]                            //caracteristicas que van cambiando
 
         }
     }
+    componentDidMount (){
+        fetch ("https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&top?limit=10")
+    .then(response => response.json())
+.then (lista => {
+    console.log (lista)
+    this.setState({
+        listaTracks:lista.data
+    })
+}) 
+}
+
     render() {
         return (
             <section className="card-container">
-                <Card/>
+                {this.state.listaTracks.map((trackDetail,idx)=> <Card trackDetail={trackDetail} key={idx}/>)}
             </section>
         );
     }
