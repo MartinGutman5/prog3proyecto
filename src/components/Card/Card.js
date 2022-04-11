@@ -38,14 +38,14 @@ showDescription(){
             </section>
             <main>
                 <img class="imagen" src={this.props.trackDetail.album.cover} alt=""/>
-                <h3>{this.props.trackDetail.title}</h3>
+                <h3 class="desc">{this.props.trackDetail.title}</h3>
                 <p className="description">{this.props.trackDetail.artist.name}</p>
                 <section className={this.state.display}>
                     <p>{this.props.trackDetail.duration}</p>
                     <p>album:{this.props.trackDetail.album.title}</p>
                     
                 </section>
-                <a onClick={()=>this.showDescription()}>{this.state.text}</a>
+                <a class="ver" onClick={()=>this.showDescription()}>{this.state.text}</a>
             </main>
         </article>
         );

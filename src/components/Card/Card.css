@@ -20,5 +20,14 @@
     padding-left: 15px;
 }
 .articlebackground{
-    background-color: blanchedalmond;
+    background-color: bisque;
+}
+.desc{
+    margin: 20px;
+}
+.description{
+    margin: 20px;
+}
+.ver{
+    margin: 20px;
 }
