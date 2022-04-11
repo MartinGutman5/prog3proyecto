@@ -7,7 +7,7 @@ class Main extends Component {
         this.state={
          listaTracks:[],                         //caracteristicas que van cambiando
          filteredTracks:[] 
-        }
+        }   
     }
     componentDidMount (){
         fetch ("https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&top?limit=10")

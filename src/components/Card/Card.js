@@ -27,7 +27,7 @@ showDescription(){
 
     render() {
         return (
-            <article>
+            <article class="articlebackground">
             <section className="navigation">
                 <div>
                     <i className="fas fa-chevron-left"></i>

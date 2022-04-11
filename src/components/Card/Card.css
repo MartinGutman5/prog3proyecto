@@ -6,11 +6,19 @@
 }
 .card-container article{
     width: 30%;
-    border-radius: solid black;
-    margin-left: 45px;
+    border: solid black;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 0px;
+    margin-top: 20px;
+    border-radius: 20px;
 }
+
 .imagen{
-    width: 250px;
-    height: 250px;
+    width: 400px;
+    height: 400px;
+    padding-left: 15px;
+}
+.articlebackground{
+    background-color: blanchedalmond;
 }
