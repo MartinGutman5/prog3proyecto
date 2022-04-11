@@ -3,8 +3,13 @@ import "./Header.css"
 class Header extends Component { 
     constructor (){
         super ()
-        this.state={}
+        this.state={
+    
+        }
     }
+    
+    
+
     render() {
         return (
             <header>
@@ -15,7 +20,6 @@ class Header extends Component {
                 <i className="fas fa-align-justify"></i>
                <form action=""></form>
     </section>
-      <h1>Título/ Nombre de la app</h1>
             <button type="button">Cargar más tarjetas</button>
     </header>
         );

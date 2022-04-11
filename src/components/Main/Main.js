@@ -29,9 +29,13 @@ deleteTrack(id){
 }
     render() {
         return (
-            <section className="card-container">
+            <div>
+               {this.state.listaTracks.length === 0?
+               <h3 className= 'cargando'> Cargando... </h3> :
+               <section className="card-container">
                 {this.state.listaTracks.map((trackDetail,idx)=> <Card trackDetail={trackDetail} key={idx} delete={(id)=>this.deleteTrack(id)}/>)}
-            </section>
+             </section>}
+          </div>
         );
     }
 }
