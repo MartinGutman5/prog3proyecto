@@ -1,0 +1,13 @@
+.listaTracks{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 150px;
+}
+.filteredTracks{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 150px;
+}
+.Main{
+    background-color: darkred;
+}

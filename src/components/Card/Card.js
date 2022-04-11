@@ -36,7 +36,7 @@ showDescription(){
                 <i className="far fa-window-close" 
                 onClick={()=>this.props.delete(this.props.trackDetail.id)}></i>
             </section>
-            <main>
+            <main class="imagen">
                 <img src={this.props.trackDetail.album.cover} alt=""/>
                 <h3>{this.props.trackDetail.title}</h3>
                 <p className="description">{this.props.trackDetail.artist.name}</p>
