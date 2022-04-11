@@ -4,8 +4,13 @@
 .hidden{
     display: none;
 }
+.card-container article{
+    width: 30%;
+    border-radius: solid black;
+    margin-left: 45px;
+    padding: 0px;
+}
 .imagen{
-    display: grid;
-    grid-template-columns: 250px 250px 250px 250px;
-    grid-template-rows: 200px;
+    width: 250px;
+    height: 250px;
 }

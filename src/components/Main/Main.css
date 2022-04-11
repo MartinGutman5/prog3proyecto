@@ -1,13 +1,7 @@
-.listaTracks{
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: 150px;
-}
-.filteredTracks{
-    display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
-    grid-template-rows: 150px;
-}
-.Main{
-    background-color: darkred;
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: black;
 }
