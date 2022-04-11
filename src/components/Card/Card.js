@@ -1,9 +1,28 @@
 import React, { Component } from 'react';
-
+import "./Card.css"
 class Card extends Component {
     constructor (props){
     super (props)
-    this.state={}
+    this.state={
+        text:"ver mas",
+        showing:false,
+        display:"hidden"
+    }
+}
+showDescription(){
+    if (!this.state.showing) {
+        this.setState({
+            text:"ver menos",
+            showing:true,
+            display:"show"
+        })
+    }else{
+        this.setState({
+            text:"ver más",
+            showing:false,
+            display:"hidden"
+        })
+    }
 }
 
     render() {
@@ -14,18 +33,19 @@ class Card extends Component {
                     <i className="fas fa-chevron-left"></i>
                     <i className="fas fa-chevron-right"></i>
                 </div>
-                <i className="far fa-window-close"></i>
+                <i className="far fa-window-close" 
+                onClick={()=>this.props.delete(this.props.trackDetail.id)}></i>
             </section>
             <main>
-                <img src="./img/image-default.png" alt=""/>
+                <img src={this.props.trackDetail.album.cover} alt=""/>
                 <h3>{this.props.trackDetail.title}</h3>
                 <p className="description">{this.props.trackDetail.artist.name}</p>
-                <section className="aditional-info">
+                <section className={this.state.display}>
                     <p>{this.props.trackDetail.duration}</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+                    <p>album:{this.props.trackDetail.album.title}</p>
+                    
                 </section>
-                <a href="">Ver más</a>
+                <a onClick={()=>this.showDescription()}>{this.state.text}</a>
             </main>
         </article>
         );

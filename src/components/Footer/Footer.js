@@ -8,7 +8,7 @@ class Footer extends Component {
     render() {
         return (
             <footer>
-            <ul classNameName="team">
+            <ul className="team">
                 <li>Nombre integrante 1</li>
                 <li>Nombre integrante 2</li>
                 <li>Nombre integrante 3</li>
