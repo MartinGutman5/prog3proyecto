@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Card from '../Card/Card'
+import Card from '../Card/Card';
+import Header from '../Header/Header'
 import "./Main.css"
 class Main extends Component { 
     constructor (){
@@ -30,6 +31,7 @@ deleteTrack(id){
     render() {
         return (
             <div>
+                <Header />
                {this.state.listaTracks.length === 0?
                <h3 className= 'cargando'> Cargando... </h3> :
                <section className="card-container">
