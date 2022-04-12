@@ -15,10 +15,19 @@
 }
 
 .imagen{
-    width: 400px;
-    height: 400px;
-    padding-left: 15px;
+    width: 350px;
+    height: 350px;
+    padding-left: 37px;
 }
 .articlebackground{
     background-color: blanchedalmond;
+}
+.desc{
+    padding-left: 15px;
+}
+.ver{
+    padding-left: 20px;
+}
+.description{
+    padding-left: 20px;
 }
