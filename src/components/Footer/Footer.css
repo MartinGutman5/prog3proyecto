@@ -1,0 +1,16 @@
+footer{
+    border-top: solid  rgba(187, 187, 187, 0.74) 1px;
+    margin-bottom: 54px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.creditos{
+    flex: 1;
+    text-align: left;
+    font-size: 10px;
+    padding: 25px;
+    margin: 0px;
+}

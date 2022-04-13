@@ -8,12 +8,8 @@ class Footer extends Component {
     render() {
         return (
             <footer>
-            <ul className="team">
-                <li>Bruno Grecco</li>
-                <li>Martin Gutman</li>
-                <li>Martina Pawluk</li>
-            </ul>
-        </footer>
+            <p className="creditos">Desarrollado por: Martina Pawluk, Bruno Grecco y Martin Gutman</p> 
+           </footer>
         );
     }
 }

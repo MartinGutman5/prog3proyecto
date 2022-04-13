@@ -36,7 +36,9 @@ deleteTrack(id){
                <h3 className= 'cargando'> Cargando... </h3> :
                <section className="card-container">
                 {this.state.listaTracks.map((trackDetail,idx)=> <Card trackDetail={trackDetail} key={idx} delete={(id)=>this.deleteTrack(id)}/>)}
-             </section>}
+               </section>}
+               <button class="T-button" type="button">Cargar más tarjetas</button>
+
           </div>
         );
     }

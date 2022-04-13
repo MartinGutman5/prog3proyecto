@@ -1,6 +1,7 @@
 .imagenlogo{
-    margin-left: 570px;
+    margin-left: 550px;
     border-radius: 50px;
+    height: 300px;
 }
 .titulo{
     color: black;
@@ -19,12 +20,36 @@
     font-size: 30px;
 }
 .button{
-    margin-left: 10px;
+  
     margin-top: 10px;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 55px;
+    
+    height: 32px;
+    background-color:rgb(46, 46, 46);
+    border: black;
+    color: gray;
+    font-size: 20px;
 }
+
+.form{
+    display: flex;
+    height: 30px;
+    align-items: center;
+  
+    
+}
+
 .input{
-    width: 300px;
-    height: 20px;
+    margin-bottom: 45px;
+    font-weight: lighter;
+    font-size: 10px;
+    flex: 1;
+    
+    height: 30px;
+    background-color:rgb(46, 46, 46);
+    font-size: 15px;
+    border-color: black;
+    border: 25px
+    
 }
