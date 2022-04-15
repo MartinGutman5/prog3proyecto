@@ -27,7 +27,7 @@ showDescription(){
 
     render() {
         return (
-            <article class="articlebackground">
+            <article className={this.props.column?"card-column articlebackround":"card-row articlebackround"}>
             <section className="navigation">
                 <div>
                     <i className="fas fa-chevron-left"></i>
@@ -38,6 +38,7 @@ showDescription(){
             </section>
             <main>
                 <img class="imagen" src={this.props.trackDetail.album.cover} alt=""/>
+                <div className="infocard">
                 <h3 class="desc">{this.props.trackDetail.title}</h3>
                 <p class="description">{this.props.trackDetail.artist.name}</p>
                 <section className={this.state.display}>
@@ -46,6 +47,8 @@ showDescription(){
                     
                 </section>
                 <a class="ver" onClick={()=>this.showDescription()}>{this.state.text}</a>
+                </div>
+                
             </main>
         </article>
         );

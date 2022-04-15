@@ -3,8 +3,8 @@ import "./Header.css";
 import logo from './img/logoR.png';
 
 class Header extends Component { 
-    constructor (){
-        super ()
+    constructor (props){
+        super (props)
         this.state={
             value: '',
         }
@@ -29,11 +29,11 @@ class Header extends Component {
 
             <form className="form" method="get" onSubmit={(event)=>this.evitarDefault(event)}>
                 <input onChange={(cambios)=>this.obtenerDatos(cambios)} className="input" type="text" placeholder= "Nombre de la canción" value={this.state.value}></input>
-                <button className="button" type="Submit"> Buscar </button>
+                <button className="button"  type="Submit"> Buscar </button>
             </form>
             <section class="colorfont">
-                  <i className="fas fa-th pico"></i>
-                  <i className="fas fa-align-justify pico"></i>
+                {!this.props.column?<i className="fas fa-th pico" onClick={()=>this.props.changeDirection()}></i>:<i className="fas fa-align-justify pico" onClick={()=>this.props.changeDirection()}></i>
+            }
             </section>         
              
     </header>

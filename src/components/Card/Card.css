@@ -4,7 +4,7 @@
 .hidden{
     display: none;
 }
-.card-container article{
+.card-column{
     width: 30%;
     border: solid black;
     margin-left: 20px;
@@ -13,7 +13,17 @@
     margin-top: 20px;
     border-radius: 20px;
 }
-
+.card-row{
+    width: 90%;
+    border: solid black;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: row;
+}
 .imagen{
     width: 350px;
     height: 350px;
@@ -30,4 +40,14 @@
 }
 .description{
     padding-left: 20px;
+}
+.card-row main{
+    display:flex;
+    flex-direction: row;
+}
+.infocard{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 100%;
 }

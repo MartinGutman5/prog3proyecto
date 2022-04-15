@@ -7,7 +7,8 @@ class Main extends Component {
         super ()
         this.state={
          listaTracks:[],                         //caracteristicas que van cambiando
-         filteredTracks:[] 
+         filteredTracks:[] , 
+         column:true
         }   
     }
     componentDidMount (){
@@ -28,20 +29,32 @@ deleteTrack(id){
         filteredTracks:newTracks
     })
 }
+changeDirection(){
+if(this.state.column){
+    this.setState({
+        column:false
+    })
+} else {
+    this.setState ({
+        column:true
+    })
+}
+}
     render() {
         return (
             <div>
-                <Header />
+                <Header column={this.state.column} changeDirection ={()=>this.changeDirection()} />
                {this.state.listaTracks.length === 0?
                <h3 className= 'cargando'> Cargando... </h3> :
-               <section className="card-container">
-                {this.state.listaTracks.map((trackDetail,idx)=> <Card trackDetail={trackDetail} key={idx} delete={(id)=>this.deleteTrack(id)}/>)}
+               <section className={this.state.column?"card-container-column":"card-container-row"}>
+                {this.state.listaTracks.map((trackDetail,idx)=> <Card trackDetail={trackDetail} key={idx} delete={(id)=>this.deleteTrack(id)}column={this.state.column}/>)}
                </section>}
                <button class="T-button" type="button">Cargar más tarjetas</button>
 
           </div>
         );
     }
+    
 }
 
 export default Main;
