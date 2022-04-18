@@ -42,9 +42,9 @@ showDescription(){
                 <h3 class="desc">{this.props.trackDetail.title}</h3>
                 <p class="description">{this.props.trackDetail.artist.name}</p>
                 <section className={this.state.display}>
-                    <p>{this.props.trackDetail.duration}</p>
-                    <p>album:{this.props.trackDetail.album.title}</p>
-                    
+                    <p>Duration : {this.props.trackDetail.duration}</p>
+                    <p>Album : {this.props.trackDetail.album.title}</p>
+                    <p>Ranking : {this.props.trackDetail.rank}</p>
                 </section>
                 <a class="ver" onClick={()=>this.showDescription()}>{this.state.text}</a>
                 </div>
