@@ -8,7 +8,8 @@ class Main extends Component {
         this.state={
          listaTracks:[],                         //caracteristicas que van cambiando
          filteredTracks:[] , 
-         column:true
+         column:true,
+         contador: 0
         }   
     }
     componentDidMount (){
@@ -29,6 +30,22 @@ deleteTrack(id){
         filteredTracks:newTracks
     })
 }
+
+cargarMas(){
+    this.setState({
+    contador: this.state.contador + 10
+},()=> fetch (`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&index=${this.state.contador}&limit=10`)
+    .then(response => response.json())
+.then (lista => {
+    console.log (lista)
+    this.setState({
+        listaTracks: this.state.listaTracks.concat(lista.data),
+        filteredTracks:this.state.filteredTracks.concat(lista.data)
+    })
+}) )
+   
+}
+
 changeDirection(){
 if(this.state.column){
     this.setState({
@@ -49,7 +66,7 @@ if(this.state.column){
                <section className={this.state.column?"card-container-column":"card-container-row"}>
                 {this.state.listaTracks.map((trackDetail,idx)=> <Card trackDetail={trackDetail} key={idx} delete={(id)=>this.deleteTrack(id)}column={this.state.column}/>)}
                </section>}
-               <button class="T-button" type="button">Cargar más tarjetas</button>
+               <button className="T-button" onClick={()=>this.cargarMas()} type="button">Cargar más tarjetas</button>
 
           </div>
         );
