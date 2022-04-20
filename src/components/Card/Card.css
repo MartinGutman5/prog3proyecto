@@ -7,7 +7,6 @@
 .card-column{
     width: 30%;
     border: solid black;
-    margin-left: 20px;
     margin-right: 20px;
     padding: 0px;
     margin-top: 20px;
@@ -26,8 +25,8 @@
     flex-direction: row;
 }
 .imagen{
-    width: 350px;
-    height: 350px;
+    width: 80%;
+    height: 80%;
     padding-left: 37px;
 }
 .articlebackground{
@@ -51,7 +50,4 @@
     flex-direction: column;
     align-items: flex-start;
     min-width: 100%;
-}
-.card-column articlebackround{
-    background-color: rgb(197, 126, 126);
 }

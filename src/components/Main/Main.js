@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Card from '../Card/Card';
 import Header from '../Header/Header'
+import Filtro from "../Filtro/Filtro"
 import "./Main.css"
 class Main extends Component { 
     constructor (){
@@ -9,9 +10,10 @@ class Main extends Component {
          listaTracks:[],                         //caracteristicas que van cambiando
          filteredTracks:[] , 
          column:true,
-         contador: 0
+         contador: 0,
         }   
     }
+
     componentDidMount (){
         fetch ("https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&top?limit=10")
     .then(response => response.json())
@@ -22,6 +24,15 @@ class Main extends Component {
         filteredTracks:lista.data
     })
 }) 
+}
+
+filtrarCanciones(textoAFiltrar){ //pasar a header
+    let cancionesFiltradas = [];
+    cancionesFiltradas = this.state.listaTracks.filter( unaCancion => unaCancion.title.toLowerCase().includes(textoAFiltrar.toLowerCase()))
+    this.setState({
+        listaTracks: cancionesFiltradas,
+        filteredTracks: cancionesFiltradas
+    })
 }
 deleteTrack(id){
     const newTracks=this.state.listaTracks.filter(track=>track.id !== id)
@@ -56,22 +67,28 @@ if(this.state.column){
         column:true
     })
 }
+
 }
     render() {
         return (
             <div>
                 <Header column={this.state.column} changeDirection ={()=>this.changeDirection()} />
-               {this.state.listaTracks.length === 0?
-               <h3 className= 'cargando'> Cargando... </h3> :
-               <section className={this.state.column?"card-container-column":"card-container-row"}>
-                {this.state.listaTracks.map((trackDetail,idx)=> <Card trackDetail={trackDetail} key={idx} delete={(id)=>this.deleteTrack(id)}column={this.state.column}/>)}
-               </section>}
+                <Filtro filtrarCanciones= {(textoAFiltrar)=> this.filtrarCanciones(textoAFiltrar)}/>
+                
+                <section className={this.state.column?"card-container-column":"card-container-row"}>
+                   {this.state.listaTracks.length === 0?
+                   <h3 className= 'cargando'> Cargando... </h3> :
+                   this.state.listaTracks.map((trackDetail,idx)=> <Card trackDetail={trackDetail} key={idx} delete={(id)=>this.deleteTrack(id)}column={this.state.column}/>)}
+                   }
+                </section>
+
                <button className="T-button" onClick={()=>this.cargarMas()} type="button">Cargar más tarjetas</button>
 
           </div>
-        );
+        )
     }
     
 }
 
 export default Main;
+
