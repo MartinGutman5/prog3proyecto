@@ -26,9 +26,9 @@ class Main extends Component {
 }) 
 }
 
-filtrarPersonajes(textoAFiltrar){ //pasar a header
+filtrarCanciones(textoAFiltrar){ //pasar a header
     let cancionesFiltradas = [];
-    cancionesFiltradas = this.state.listaTracks.filter( unaCancion => unaCancion.name.toLowerCase().includes(textoAFiltrar.toLowerCase()))
+    cancionesFiltradas = this.state.listaTracks.filter( unaCancion => unaCancion.title.toLowerCase().includes(textoAFiltrar.toLowerCase()))
     this.setState({
         listaTracks: cancionesFiltradas,
         filteredTracks: cancionesFiltradas
@@ -67,8 +67,6 @@ if(this.state.column){
         column:true
     })
 }
-
-
 
 }
     render() {
