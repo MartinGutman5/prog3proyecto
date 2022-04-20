@@ -77,9 +77,11 @@ if(this.state.column){
                 
                 <section className={this.state.column?"card-container-column":"card-container-row"}>
                    {this.state.listaTracks.length === 0?
-                   <h3 className= 'cargando'> Cargando... </h3> :
+                   <section className="section-cargando">
+                        <div className="spinner"></div>
+                        <h3 className="cargando">Cargando... </h3>
+                    </section> :
                    this.state.listaTracks.map((trackDetail,idx)=> <Card trackDetail={trackDetail} key={idx} delete={(id)=>this.deleteTrack(id)}column={this.state.column}/>)}
-                   }
                 </section>
 
                <button className="T-button" onClick={()=>this.cargarMas()} type="button">Cargar más tarjetas</button>

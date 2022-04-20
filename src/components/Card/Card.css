@@ -7,8 +7,6 @@
 .card-column{
     width: 30%;
     border: solid black;
-    margin-right: 20px;
-    padding: 0px;
     margin-top: 20px;
     border-radius: 20px;
     background-color:rgb(197, 126, 126);
@@ -24,20 +22,26 @@
     display:flex;
     flex-direction: row;
 }
+
+.img-container{
+    width: 100%;
+}
 .imagen{
-    width: 80%;
-    height: 80%;
-    padding-left: 37px;
+    width: 100%;
+    height: 100%;
 }
 .articlebackground{
     background-color:rgb(197, 126, 126);
 }
+.div-title{
+    height: 60px;
+    padding: 16px;
+
+}
 .desc{
-    padding-left: 15px;
+    font-size: 20px;
 }
-.ver{
-    padding-left: 20px;
-}
+
 .description{
     padding-left: 20px;
 }
@@ -49,5 +53,37 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    min-width: 100%;
+    height: 100%;
+}
+
+.icono-cancelar{
+    font-size: 20px;
+}
+
+.navigation{
+    display: flex;
+    padding: 24px;
+}
+
+.main-container{
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div-main-button-ver{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+.div-button-ver{
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: rgb(151, 151, 151) 1px solid;
+    border-radius: 8px;
+    background-color: white;
 }
