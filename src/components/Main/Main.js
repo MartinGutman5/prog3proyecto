@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Card from '../Card/Card';
 import Header from '../Header/Header'
-import Filtro from "../Filtro/Filtro"
+import Filtro from '../Filtro/Filtro'
 import "./Main.css"
 class Main extends Component { 
     constructor (){
