@@ -1,0 +1,23 @@
+.form{
+    display: flex;
+    height: 20px;
+    align-items: center;
+   margin-top: 40px;
+  
+    
+}
+
+.input{
+    margin-bottom: 45px;
+    font-weight: lighter;
+    font-size: 10px;
+    flex: 1;
+    
+    height: 30px;
+    background-color:white;
+    font-size: 15px;
+    border-color: black;
+    border: 25px;
+    border-radius: 7px;
+    
+}

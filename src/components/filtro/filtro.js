@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Filtro.css'
 
 class Filtro extends Component{
     constructor(props){
@@ -12,14 +13,14 @@ class Filtro extends Component{
         this.setState({
                 value: datos.target.value
             },
-            ()=>this.props.filtrarPersonajes(this.state.value))
+            ()=>this.props.filtrarCanciones(this.state.value))
     }
 
     render(){
         console.log(this.props)
         return(
-            <form>
-                <input onChange={(datos)=>this.capturarDatos(datos)} type="text" value={this.state.value} />
+            <form className= 'form'>
+                <input className= 'input' onChange={(datos)=>this.capturarDatos(datos)} type="text" value={this.state.value} placeholder="Buscar canción" />
             </form>
         )
     }

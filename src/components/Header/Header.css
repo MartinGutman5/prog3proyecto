@@ -26,30 +26,9 @@
     margin-bottom: 55px;
     
     height: 32px;
-    background-color:rgb(46, 46, 46);
+    background-color:rgba(173, 36, 36, 0.74) 1px;
     border: black;
     color: gray;
     font-size: 20px;
 }
 
-.form{
-    display: flex;
-    height: 30px;
-    align-items: center;
-  
-    
-}
-
-.input{
-    margin-bottom: 45px;
-    font-weight: lighter;
-    font-size: 10px;
-    flex: 1;
-    
-    height: 30px;
-    background-color:rgb(46, 46, 46);
-    font-size: 15px;
-    border-color: black;
-    border: 25px
-    
-}
