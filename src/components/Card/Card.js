@@ -4,7 +4,7 @@ class Card extends Component {
     constructor (props){
     super (props)
     this.state={
-        text:"ver mas",
+        text:"Ver mas",
         showing:false,
         display:"hidden"
     }
@@ -12,7 +12,7 @@ class Card extends Component {
 showDescription(){
     if (!this.state.showing) {
         this.setState({
-            text:"ver menos",
+            text:"Ver menos",
             showing:true,
             display:"show"
         })
@@ -40,7 +40,7 @@ showDescription(){
                         <h3 className="desc">{this.props.trackDetail.title}</h3>
                     </div>
                     <div className="div-artist"> 
-                        <p className="description">{this.props.trackDetail.artist.name}</p>
+                        <p className="description"><b>Artista:</b> {this.props.trackDetail.artist.name}</p>
                     </div>
                     <section className={this.state.display}>
                         <p>Duration : {this.props.trackDetail.duration}</p>
