@@ -31,7 +31,7 @@ deleteTrack(id){
     render() {
         return (
             <div>
-                <Header />
+                <Header/>
                {this.state.listaTracks.length === 0?
                <h3 className= 'cargando'> Cargando... </h3> :
                <section className="card-container">
@@ -45,3 +45,4 @@ deleteTrack(id){
 }
 
 export default Main;
+
