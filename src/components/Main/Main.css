@@ -13,12 +13,12 @@
 
 }
 .T-button{
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 10px;
     margin: 10px;
     margin-left: 25px;
-    background-color: solid  rgba(187, 187, 187, 0.74) 1px;
-    border-color: black ;
+    background-color: rgb(250, 245, 228);
+    border: rgb(250, 245, 228);
 
 }
 .section-cargando{
@@ -33,7 +33,7 @@
 }
 
 .spinner {
-    border: 10px solid rgb(0, 0, 0);
+    border: 10px solid black;
     width: 36px;
     height: 36px;
     

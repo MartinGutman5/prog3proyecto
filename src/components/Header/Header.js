@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Header.css";
-import logo from './img/logoR.png';
+import logo from './img/logo.png';
 
 class Header extends Component { 
     constructor (props){
@@ -13,7 +13,7 @@ class Header extends Component {
 
     render() {
         return (
-            <header>
+            <header className="header">
     
                 <img className="imagenlogo" src= {logo}  />
                 
